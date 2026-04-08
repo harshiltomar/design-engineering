@@ -1,6 +1,6 @@
-import DarkModeBrainrot from "@/components/dark-mode";
+import DarkModeBrainrot from "@/components/card";
 import Image from "next/image";
 
 export default function Home() {
-  return <DarkModeBrainrot />;
+  return <section>Hello world</section>
 }
