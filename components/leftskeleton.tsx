@@ -1,5 +1,5 @@
 import React from 'react'
-import { MouseBoxIcon } from './icons'
+import { AnthropicLogo, MetaLogo, MouseBoxIcon, OpenAILogo } from './icons'
 
 export const LeftSkeleton = () => {
     return (
@@ -10,6 +10,9 @@ export const LeftSkeleton = () => {
                     <Modelstitle />
                     <Mainsection />
                 </div>
+            </div>
+            <div className='absolute top-0 right-0'>
+                <button className='bg-neutral-100 text-neutral-500 px-2 py-1 rounded-xl text-black'>hahahah</button>
             </div>
         </div>
     )
@@ -26,17 +29,17 @@ const Navbar = () => {
 }
 
 const Modelstitle = () => {
-    return <div className='flex pt-5 gap-2 items-center text-neutral-500 text-sm'>
+    return <div className='flex pt-5 pb-2 gap-2 items-center text-neutral-500 text-sm'>
         <MouseBoxIcon className='w-5 h-5'/>
-        <span className='text-lg font-medium'>All Models</span>
-        <button className='bg-neutral-100 text-neutral-500 px-2 py-1 rounded-xl'>69,420</button>
+        <span className='text-lg font-medium text-sm'>All Models</span>
+        <button className='bg-neutral-100 text-neutral-500 px-1.5 py-0.5 rounded-lg text-xs'>69,420</button>
     </div>
 }
 
 const Mainsection = () => {
     return <div className='h-full w-full flex flex-col py-2 gap-2'>
-        <div className='flex flex-row text-sm justify-between'>Claude 4 Opus <button className='bg-red-100 border border-red-500 text-red-500 px-2 py-1 rounded-sm'>Unavailable</button></div>
-        <div className='flex flex-row text-sm justify-between'>ChatGPT <button className='bg-green-100 border border-green-500 text-green-500 px-2 py-1 rounded-sm'>Connected</button></div>
-        <div className='flex flex-row text-sm justify-between'>Llama 3.2 <button className='bg-yellow-100 border border-yellow-500 text-yellow-500 px-2 py-1 rounded-sm'>Waiting</button></div>
+        <div className='flex flex-row text-sm justify-between'><div className='flex flex-row items-center gap-2'><AnthropicLogo className='h-5 w-5'/>Claude 4 Opus</div> <button className='bg-red-100 border border-red-500 text-red-500 px-2 py-1 rounded-sm'>Unavailable</button></div>
+        <div className='flex flex-row text-sm justify-between'><div className='flex flex-row items-center gap-2'><OpenAILogo className='h-5 w-5'/>ChatGPT</div> <button className='bg-green-100 border border-green-500 text-green-500 px-2 py-1 rounded-sm'>Connected</button></div>
+        <div className='flex flex-row text-sm justify-between'><div className='flex flex-row items-center gap-2'><MetaLogo className='h-5 w-5'/>Llama 3.2</div> <button className='bg-yellow-100 border border-yellow-500 text-yellow-500 px-2 py-1 rounded-sm'>Waiting</button></div>
     </div>
 }

@@ -1,12 +1,14 @@
 import React from 'react'
-import { BrainIcon, MouseBoxIcon } from './icons'
+import { BrainIcon, ForkIcon, MouseBoxIcon } from './icons'
 import { cn } from '@/lib/utils'
 import { LeftSkeleton } from './leftskeleton'
+import { MainSkeleton } from './rightskeleton'
+import { Bottomskeleton } from './bottomskeleton'
 
 export const Grid = () => {
 
     return (
-        <div className='max-w-5xl pt-20 mx-auto border-x border-neutral-200 bg-gray-100 min-h-screen text-neutral-800'>
+        <div className='max-w-7xl pt-20 mx-auto border-x border-neutral-200 bg-gray-100 min-h-screen text-neutral-800'>
             <div className='grid grid-cols-1 lg:grid-cols-2 divide-x divide-y divide-neutral-100'>
                 <Card>
                     <CardHeader>
@@ -22,16 +24,16 @@ export const Grid = () => {
                         <CardTitle>Text to workflow builder</CardTitle>
                     </CardHeader>
                     <CardDescription>Preview and debug workflow logic in a safe sandbox before deploying, helping you iterate with confidence.</CardDescription>
-                    <CardSkeleton></CardSkeleton>
+                    <CardSkeleton><MainSkeleton/></CardSkeleton>
                 </Card>
 
                 <Card className='lg:col-span-2'>
                     <CardHeader>
-                        <MouseBoxIcon />
-                        <CardTitle>Text to workflow builder</CardTitle>
+                        <ForkIcon className='h-6 w-6'/>
+                        <CardTitle>Native Tools Integration</CardTitle>
                     </CardHeader>
-                    <CardDescription>Preview and debug workflow logic in a safe sandbox before deploying, helping you iterate with confidence.</CardDescription>
-                    <CardSkeleton></CardSkeleton>
+                    <CardDescription>Track real-time activity of agents with detailed records of triggers, tools used, outcomes, and timestamps.</CardDescription>
+                    <CardSkeleton><Bottomskeleton/></CardSkeleton>
                 </Card>
             </div>
         </div>
@@ -52,7 +54,7 @@ const CardSkeleton = ({
                 "h-60 w-full my-4 rounded-lg overflow-hidden",
                 "bg-[radial-gradient(var(--color-neutral-200)_1px,_transparent_1px)]",
                 "[background-size:10px_10px]",
-                "mask-radial-from-100%",
+                "mask-radial-from-50%",
                 className
             )}
         >
