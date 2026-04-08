@@ -33,7 +33,7 @@ export default function RootLayout({
           <main className="bg-background text-foreground h-screen">
             {children}
           </main>
-          <ModeToggle/>
+          {/* <ModeToggle/> */}
         </ThemeProvider>
       </body>
     </html>
