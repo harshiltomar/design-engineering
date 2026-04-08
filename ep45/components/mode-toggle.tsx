@@ -44,9 +44,9 @@ export const ModeToggle = () => {
     return (
         <button
             onClick={SWITCH_THEME}
-            className='absolute flex items-center justify-center top-4 right-4'>
-            <SunIcon />
-            <MoonIcon />
+            className='absolute size-8 border border-neutral-200 dark:border-neutral-800 rounded-md flex items-center justify-center top-4 right-4'>
+            <SunIcon className='absolute inset-0 size-4 shrink-0 text-neutral-500 dark:scale-0 scale-100 dark:rotate-45 transition-all duration-300 m-auto'/>
+            <MoonIcon className='absolute inset-0 size-4 shrink-0 dark:text-neutral-200 dark:scale-100 scale-0 dark:rotate-0 transition-all duration-300 m-auto'/>
         </button>
     )
 }
