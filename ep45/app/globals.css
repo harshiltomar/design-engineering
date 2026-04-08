@@ -1,9 +1,27 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --pattern-fg: color-mix(in oklab, var(--color-neutral-500) 5%, transparent);
+  --background: var(--color-neutral-50);
+  --foreground: var(--color-neutral-950);
+}
+
+@theme {
+  --animate-marquee: marquee 10s linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.dark {
+  --background: var(--color-neutral-950);
+  --foreground: var(--color-neutral-50);
 }
 
 @theme inline {
@@ -11,4 +29,4 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-} 
+}
