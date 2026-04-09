@@ -33,7 +33,7 @@ export const Grid = () => {
                         <CardTitle>Native Tools Integration</CardTitle>
                     </CardHeader>
                     <CardDescription>Track real-time activity of agents with detailed records of triggers, tools used, outcomes, and timestamps.</CardDescription>
-                    <CardSkeleton><Bottomskeleton/></CardSkeleton>
+                    <CardSkeleton className='h-90'><Bottomskeleton/></CardSkeleton>
                 </Card>
             </div>
         </div>
